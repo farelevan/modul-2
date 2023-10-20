@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>  Lost & Found Universitas Pertamina</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+</head>
+<body>
+    <header>
+        <h1><img src="Logo-UP.png" height="40" width="auto">Lost & Found Universitas Pertamina</h1>
+    </header>
+    <main>
+        <section id="lost-items">
+            <h2>Daftar Barang Hilang</h2>
+            <ul>
+                <li>
+                    <h3>Totebag Bigbox</h3>
+                    <img src="totebag.jpg" height="300" width=auto>
+                    <p>Tas totebag putih, berisi 2 tumbler dan 2 topi yang berlaebl Bigbox. Ditemukan di ruangan 2505.</p>
+                    <button class="claim-button">Claim</button>
+                </li>
+                <li>
+                    <h3>Iphone XR</h3>
+                    <img src="ipon.jpg" height="300" width=auto>
+                    <p>Hp iphone XR, case warna biru tua. Ditemukan di ruangan 2607.</p>
+                    <button class="claim-button">Claim</button>
+                </li>
+                <li>
+                    <h3>Tas Laptop</h3>
+                    <img src="Tas_laptop.jpg" height="300" width=auto>
+                    <p>Tas Laptop warna pink. Ditemukan di ruang 2101.</p>
+                    <button class="claim-button">Claim</button>
+                </li>
+                <!-- Add more lost items here -->
+
+            </ul>
+        </section>
+        <section id="claim-form" style="display: none;">
+            <h2>Claim an Item</h2>
+            <form>
+                <label for="claimant-name">Your Name:</label>
+                <input type="text" id="claimant-name" required>
+                <label for="claimant-contact">Contact Information:</label>
+                <input type="text" id="claimant-contact" required>
+                <button type="submit" id="submit-claim">Submit Claim</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Lost & Found Universitas Pertamina</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
