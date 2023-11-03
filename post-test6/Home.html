@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Farel Evan</h1>
+        <nav>
+            <ul>
+                <li><a href="">Tentang Saya</a></li>
+                <li><a href="">Portofolio</a></li>
+                <li><a href="">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="grid-container">
+        <section>
+            <h2>HELLO I'M FAREL EVAN</h2>
+            <h2>A STUDENT AT UNIVERSITAS PERTAMINA</h2>
+            <p>Saya merupakan seorang mahasiswa aktif semester 5 pada Program Studi Ilmu Komputer.</p></br>
+
+            <div class="container">
+                <h1>Form Pemesanan Makanan</h1>
+                <form id="orderForm">
+                    <label for="food">Pilihan Makanan:</label>
+                    <select id="food" name="food">
+                        <option value="Babi Kecap">Babi Kecap (Rp 45,000)</option>
+                        <option value="Babi Panggang">Babi Panggang (Rp 40,000)</option>
+                        <option value="Nasi Goreng">Nasi Goreng (Rp 25,000)</option>
+                        <option value="Mie Ayam">Mie Ayam (Rp 15,000)</option>
+                    </select>
+                    <br>
+                    <label for="quantity">Jumlah Pemesanan:</label>
+                    <input type="number" id="quantity" name="quantity" min="1" value="1">
+                    <br>
+                    <label for="voucher">Kode Voucher:</label>
+                    <input type="text" id="voucher" name="voucher">
+                    <br>
+                    <button type="button" onclick="calculateTotal()">Submit</button>
+                </form>
+                <div id="result">
+                    <h2>Hasil Pemesanan:</h2>
+                    <p>Nama Pemesanan: <span id="orderName"></span></p>
+                    <p>Jumlah Pemesanan: <span id="orderQuantity"></span></p>
+                    <p>Total Diskon: <span id="totalDiscount"></span></p>
+                    <p>Total Harga: <span id="totalPrice"></span></p>
+                </div>
+            </div>      
+        </section>
+        <aside>
+            <img src="Farel.jpg" alt="Foto Pribadi">
+        </aside>
+    </div>
+    <footer>
+        &copy; 2023 Farel Evan
+    </footer>
+    <script>
+        function calculateTotal() {
+          const foodSelect = document.getElementById("food");
+          const quantityInput = document.getElementById("quantity");
+          const voucherInput = document.getElementById("voucher");
+          const orderName = document.getElementById("orderName");
+          const orderQuantity = document.getElementById("orderQuantity");
+          const totalDiscount = document.getElementById("totalDiscount");
+          const totalPrice = document.getElementById("totalPrice");
+      
+          const foodValue = foodSelect.value; // Mengambil nilai pilihan makanan
+          let foodPrice = 0;
+      
+          // Mengatur harga makanan berdasarkan pilihan
+          if (foodValue === "Babi Kecap") {
+              foodPrice = 45000;
+          } else if (foodValue === "Babi Panggang") {
+              foodPrice = 40000;
+          } else if (foodValue === "Nasi Goreng") {
+              foodPrice = 25000;
+          } else if (foodValue === "Mie Ayam") {
+              foodPrice = 15000;
+          }
+      
+          const quantity = parseInt(quantityInput.value);
+          const voucher = voucherInput.value;
+      
+          let discount = 0;
+      
+          if (voucher === "LEONASPRAKGANTENG") {
+              discount = (foodPrice * quantity * 0.20);
+          }
+      
+          orderName.textContent = foodValue;
+          orderQuantity.textContent = quantity;
+          totalDiscount.textContent = "Rp " + discount;
+          totalPrice.textContent = "Rp " + (foodPrice * quantity - discount);
+      }
+    </script>
+
+</body>
+</html>
