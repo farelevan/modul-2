@@ -1,0 +1,78 @@
+/* CSS untuk seluruh halaman */
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('kiminonawa.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    color: #fff;
+}
+
+/* CSS untuk papan permainan */
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 5px solid ;
+    border-radius: 30px;
+    border-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    border-image-slice: 1;
+    background: transparent;
+}
+
+h1{
+    background-color: burlywood;
+}
+
+/* Hover effect untuk seluruh cell */
+.cell:hover {
+    background-color: #e0e0e0;
+}
+
+/* CSS untuk status dan tombol */
+.status {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#reset, #toggleDarkMode {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: burlywood;
+    color: #fff;
+    border: none;
+}
+
+#reset:hover, #toggleDarkMode:hover {
+    background-color: burlywood;
+}
+
+/* CSS untuk dark mode di dalam cell */
+.dark-mode .cell {
+    background-color: #333;
+    color: #fff;
+}
