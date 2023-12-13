@@ -1,0 +1,41 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to right, #CDB4DB, #FFC8DD, #FFAFCC);
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.book {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #ecf0f1;
+    border-radius: 5px;
+}
+
+.book img {
+    width: 30%;
+    height: auto;
+    margin-bottom: 10px;
+}
