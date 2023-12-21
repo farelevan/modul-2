@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-left: 30px;
+}
+
+nav a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+}
+
+nav a h2{
+    margin-left: 10px;
+
+}
+
+nav ul{
+    display:flex;
+}
+
+li.nav{
+    background-color: transparent;
+    list-style: none;
+    border: none;
+    width: 180px;
+    margin: 0;
+    padding: 0;
+}
+
+section#lost-items div.items {
+    padding: 0;
+    display: grid; 
+    grid-template-areas: "item1 item2 item3 item4 item5";
+                         
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+section#lost-items div.items div#item1{
+    grid-area: item1;
+}
+
+section#lost-items div.items div#item2{
+    grid-area: item2;
+}
+
+
+
+
+section#lost-items div.items div {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+li h3 {
+    font-size: 18px;
+}
+
+
+button.claim-button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button.claim-button:hover {
+    background-color: #0056b3;
+}
+
+#claim-form {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+form {
+    text-align: left;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0;
+}       
+
+button#submit-claim {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button#submit-claim:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
